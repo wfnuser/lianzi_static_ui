@@ -151,7 +151,6 @@
                   </li>
 
 
-
               </ul>
               <!-- sidebar menu end-->
           </div>
@@ -170,17 +169,30 @@
                           <div class="panel-body">
                               <form class="form-horizontal" role="form">
 
-
                                   <div class="form-group">
                                       <label for="expect_loan_amount" class="col-lg-3 col-sm-2 control-label">期望金额</label>
                                       <div class="col-lg-8">
-                                          <input type="text" class="form-control" id="expect_loan_amount" placeholder="万">
+                                          <select class="form-control" name="expect_loan_amount" id="expect_loan_amount">
+                                              <option value="5">5万</option>
+                                              <option value="10">10万</option>
+                                              <option value="20">20万</option>
+                                              <option value="50">50万</option>
+                                              <option value="100">100万</option>
+                                              <option value="200">200万</option>
+                                          </select>
                                       </div>
                                   </div>
                                   <div class="form-group">
                                       <label for="loan_usage" class="col-lg-3 col-sm-2 control-label">贷款用途</label>
                                       <div class="col-lg-8">
-                                          <input type="text" class="form-control" id="loan_usage">
+                                          <select class="form-control" name="loan_usage" id="loan_usage">
+                                              <option value="不限">不限</option>
+                                              <option value="个人消费">个人消费</option>
+                                              <option value="购房首付">购房首付</option>
+                                              <option value="按揭买车">按揭买车</option>
+                                              <option value="装修贷款">装修贷款</option>
+                                              <option value="留学贷款">留学贷款</option>
+                                          </select>
                                       </div>
                                   </div>
 
@@ -196,7 +208,13 @@
                                   <div class="form-group">
                                       <label for="loan_indentity" class="col-lg-3 col-sm-2 control-label">借贷人身份</label>
                                       <div class="col-lg-8">
-                                          <input type="text" class="form-control" id="loan_indentity">
+                                          <select class="form-control" name="loan_indentity" id="loan_indentity" onchange="indentitySelect('identity-staff')">
+                                              <option selected value="请选择">请选择</option>
+                                              <option value="上班族">上班族</option>
+                                              <option value="企业主">企业主</option>
+                                              <option value="个体户">个体户</option>
+                                              <option value="自由职业">自由职业</option>
+                                          </select>
                                       </div>
                                   </div>
 
@@ -206,10 +224,14 @@
                                   <div class="hidden" id="identity-staff">
                                       <div class="form-group">
                                           <label class="col-lg-3 col-sm-2 control-label">工作地点</label>
-                                          <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 上海</div>
-                                          <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 外地</div>
+                                          <div class="radio-inline">
+                                              <label><input type="radio" name="optionsRadios" value="option2" checked> 上海</label>
+                                          </div>
+                                          <div class="radio-inline">
+                                              <label><input type="radio" name="optionsRadios"  value="option2"> 外地</label>
+                                          </div>
                                       </div>
-                                      <div class="form-group">
+                                      <div  class="form-group">
                                           <label class="col-lg-3 col-sm-2 control-label">单位类型</label>
                                           <div class="col-lg-8">
                                               <input type="text" class="form-control">
@@ -239,8 +261,12 @@
                                   <div class="hidden" id="identity-bussiness-ower">
                                       <div class="form-group">
                                           <label class="col-lg-3 col-sm-2 control-label">注册地址</label>
-                                          <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 上海</div>
-                                          <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 外地</div>
+                                          <div class="radio-inline">
+                                              <label><input type="radio" name="location1" value="option2" checked> 上海</label>
+                                          </div>
+                                          <div class="radio-inline">
+                                              <label><input type="radio" name="location1" value="option2"> 外地</label>
+                                          </div>
                                       </div>
                                       <div class="form-group">
                                           <label class="col-lg-3 col-sm-2 control-label">经营年限</label>
@@ -266,8 +292,12 @@
                                   <div class="hidden" id="identity-one">
                                       <div class="form-group">
                                           <label class="col-lg-3 col-sm-2 control-label">注册地址</label>
-                                          <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 上海</div>
-                                          <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 外地</div>
+                                          <div class="radio-inline">
+                                              <label><input type="radio" name="location11" value="option2" checked> 上海</label>
+                                          </div>
+                                          <div class="radio-inline">
+                                              <label><input type="radio" name="location11" value="option2"> 外地</label>
+                                          </div>
                                       </div>
                                       <div class="form-group">
                                           <label class="col-lg-3 col-sm-2 control-label">经营年限</label>
@@ -315,8 +345,12 @@
                                   </div>
                                   <div class="form-group">
                                       <label class="col-lg-3 col-sm-2 control-label">现居住地</label>
-                                      <div class="radio-inline"><span class="checked"><input type="radio" name="positions" value="toast-top-right" checked=""></span> 上海</div>
-                                      <div class="radio-inline"><span><input type="radio" name="positions" value="toast-bottom-right"></span> 外地</div>
+                                      <div class="radio-inline">
+                                          <label><input type="radio" name="location111" value="option2" checked> 上海</label>
+                                      </div>
+                                      <div class="radio-inline">
+                                          <label><input type="radio" name="location111" value="option2"> 外地</label>
+                                      </div>
                                   </div>
                                   <div class="form-group">
                                       <label for="name" class="col-lg-3 col-sm-2 control-label">借贷人称呼</label>
@@ -326,8 +360,12 @@
                                   </div>
                                   <div class="form-group">
                                       <label class="col-lg-3 col-sm-2 control-label"></label>
-                                      <div class="radio-inline"><span class="checked"><input type="radio" name="gender" value="toast-top-right" checked=""></span> 先生</div>
-                                      <div class="radio-inline"><span><input type="radio" name="gender" value="toast-bottom-right"></span> 女士</div>
+                                      <div class="radio-inline">
+                                          <label><input type="radio" name="gender" value="option2" checked> 先生</label>
+                                      </div>
+                                      <div class="radio-inline">
+                                          <label><input type="radio" name="gender" value="option2"> 女士</label>
+                                      </div>
                                   </div>
                                   <div class="form-group">
                                       <label for="phone" class="col-lg-3 col-sm-2 control-label">联系手机</label>
@@ -359,7 +397,15 @@
                                   <div class="form-group">
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label">房产类型</label>
                                       <div class="col-lg-8">
-                                          <input type="text" class="form-control" id="house_type">
+                                          <select class="form-control" id="house_type">
+                                              <option value="没有房产">没有房产</option>
+                                              <option value="普通住宅">普通住宅</option>
+                                              <option value="商住两用房">商住两用房</option>
+                                              <option value="经济适用房/限价房">经济适用房/限价房</option>
+                                              <option value="小产权房">小产权房</option>
+                                              <option value="公寓">公寓</option>
+                                              <option value="别墅">别墅</option>
+                                          </select>
                                       </div>
                                   </div>
                                   <!-- 房产类型-->
@@ -368,80 +414,130 @@
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">现居住地</label>
                                           <div class="col-lg-8">
-                                              <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 上海</div>
-                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 外地</div>
+                                              <div class="radio-inline" style="padding-left: 0px;width: 70px">
+                                                  <label><input type="radio" name="loc1" value="option2" checked> 上海</label>
+                                              </div>
+                                              <div class="radio-inline" style="padding-left: 0px;width: 70px">
+                                                  <label><input type="radio" name="loc1" value="option2"> 外地</label>
+                                              </div>
                                           </div>
                                       </div>
+
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">有无房本</label>
                                           <div class="col-lg-8">
-                                              <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 有</div>
-                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 无</div>
+                                              <div class="radio-inline" style="padding-left: 0px;width: 70px">
+                                                  <label><input type="radio" name="loc1" value="option2" checked> 有</label>
+                                              </div>
+                                              <div class="radio-inline" style="padding-left: 0px;width: 70px">
+                                                  <label><input type="radio" name="loc1" value="option2"> 无</label>
+                                              </div>
                                           </div>
                                       </div>
+
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">产权人数</label>
                                           <div class="col-lg-8">
-                                              <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 1人</div>
-                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 2人</div>
-                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 3人</div>
+                                              <div class="radio-inline" style="padding-left: 0px">
+                                                  <label><input type="radio" name="num" value="option2" checked> 1人</label>
+                                              </div>
+                                              <div class="radio-inline" style="padding-left: 0px">
+                                                  <label><input type="radio" name="num" value="option2"> 2人</label>
+                                              </div>
+                                              <div class="radio-inline" style="padding-left: 0px">
+                                                  <label><input type="radio" name="num" value="option2"> 3人</label>
+                                              </div>
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">包括</label>
                                           <div class="col-lg-8">
-                                              <div class="radio-list"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 本人</div>
-                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 夫妻中另一方</div>
-                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 18岁以下的孩子</div>
-                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 50岁以上的老人</div>
+                                              <div class="radio-list">
+                                                  <label><input type="radio" name="include" value="option2" checked> 本人</label>
+                                              </div>
+                                              <div class="radio-list">
+                                                  <label><input type="radio" name="include" value="option2"> 夫妻中另一方</label>
+                                              </div>
+                                              <div class="radio-list">
+                                                  <label><input type="radio" name="include" value="option2"> 夫妻中另一方</label>
+                                              </div>
+                                              <div class="radio-list">
+                                                  <label><input type="radio" name="include" value="option2"> 18岁以下的孩子</label>
+                                              </div>
+                                              <div class="radio-list">
+                                                  <label><input type="radio" name="include" value="option2"> 50岁以上的老人</label>
+                                              </div>
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">房款结清状态</label>
                                           <div class="col-lg-8">
-                                              <input type="text" class="control-label">
+                                              <select class="form-control" id="u215_input">
+                                                  <option selected value="请选择">请选择</option>
+                                                  <option value="全款购买且未抵押">全款购买且未抵押</option>
+                                                  <option value="按揭已结清">按揭已结清</option>
+                                                  <option value="按揭已还12个月">按揭已还12个月</option>
+                                                  <option value="按揭还款未满12个月">按揭还款未满12个月</option>
+                                                  <option value="其他抵押中">其他抵押中</option>
+                                              </select>
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">房龄</label>
                                           <div class="col-lg-8">
-                                              <input type="text" class="control-label">
+                                              <select class="form-control" id="u218_input">
+                                                  <option selected value="请选择">请选择</option>
+                                                  <option value="10年以内">10年以内</option>
+                                                  <option value="10~20年">10~20年</option>
+                                                  <option value="21~30年">21~30年</option>
+                                                  <option value="31年以上">31年以上</option>
+                                              </select>
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">建筑面积</label>
                                           <div class="col-lg-8">
-                                              <input type="text" class="control-label">
+                                              <input type="text" class="form-control">
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">房屋市场估值</label>
                                           <div class="col-lg-8">
-                                              <input type="text" class="control-label">
+                                              <input type="text" class="form-control">
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">是否愿意抵押</label>
                                           <div class="col-lg-8">
-                                              <div class="radio-list"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 愿意抵押，以获得更高的贷款</div>
-                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 不抵押房屋，仅作为资产证明</div>
+                                              <div class="radio-list">
+                                                  <label><input type="radio" name="diya" value="option2"> 愿意抵押，以获得更高的贷款</label>
+                                              </div>
+                                              <div class="radio-list">
+                                                  <label><input type="radio" name="diya" value="option2"> 不抵押房屋，仅作为资产证明</label>
+                                              </div>
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">有无备用房屋</label>
-                                          <div class="col-lg-8">
-                                              <div class="radio-list"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 无</div>
-                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 一套</div>
-                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 多套</div>
+                                          <div class="col-lg-8" >
+                                              <div class="radio-inline" style="padding-left: 0px">
+                                                  <label><input type="radio" name="backhouse" value="option2"> 无</label>
+                                              </div>
+                                              <div class="radio-inline" style="padding-left: 0px">
+                                                  <label><input type="radio" name="backhouse" value="option2"> 一套</label>
+                                              </div>
+                                              <div class="radio-inline" style="padding-left: 0px">
+                                                  <label><input type="radio" name="backhouse" value="option2"> 多套</label>
+                                              </div>
                                           </div>
                                       </div>
                                   </div>
@@ -450,7 +546,14 @@
                                   <div class="form-group">
                                       <label for="car_type" class="col-lg-3 col-sm-2 control-label">车辆类型</label>
                                       <div class="col-lg-8">
-                                          <input type="text" class="form-control" id="car_type">
+                                          <select class="form-control" id="car_type">
+                                              <option value="请选择">请选择</option>
+                                              <option value="没有车辆">没有车辆</option>
+                                              <option value="家用轿车">家用轿车</option>
+                                              <option value="营运轿车">营运轿车</option>
+                                              <option value="营运货车">营运货车</option>
+                                              <option value="其他车辆">其他车辆</option>
+                                          </select>
                                       </div>
                                   </div>
                                   <!-- 车辆信息-->
@@ -459,54 +562,57 @@
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">车辆归属人</label>
                                           <div class="col-lg-8">
-                                              <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 本人</div>
-                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 直系亲属</div>
+                                              <div class="radio-inline" style="padding-left: 0px;width: 70px">
+                                                  <label><input type="radio" name="ower1" value="option2"> 本人</label>
+                                              </div>
+                                              <div class="radio-inline" style="padding-left: 0px;width: 70px">
+                                                  <label><input type="radio" name="ower1" value="option2"> 直系亲属</label>
+                                              </div>
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">车辆归属地</label>
                                           <div class="col-lg-8">
-                                              <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 上海</div>
-                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 外地</div>
+                                              <div class="radio-inline" style="padding-left: 0px;width: 70px">
+                                                  <label><input type="radio" name="loca1" value="option2"> 上海</label>
+                                              </div>
+                                              <div class="radio-inline" style="padding-left: 0px;width: 70px">
+                                                  <label><input type="radio" name="loca1" value="option2"> 外地</label>
+                                              </div>
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">按揭状态</label>
                                           <div class="col-lg-8">
-                                              <input type="text" class="control-label">
+                                              <input type="text" class="form-control">
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">车龄</label>
                                           <div class="col-lg-8">
-                                              <input type="text" class="control-label">
+                                              <input type="text" class="form-control">
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">车辆估值</label>
                                           <div class="col-lg-8">
-                                              <input type="text" class="control-label">
+                                              <input type="text" class="form-control">
                                           </div>
                                       </div>
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">是否愿意抵押</label>
                                           <div class="col-lg-8">
-                                              <div class="radio-list"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 愿意抵押，以获得更高的贷款</div>
-                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 不抵押车辆，仅作为资产证明</div>
-                                          </div>
-                                      </div>
-                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
-                                      <div class="col-lg-8">
-                                          <label class="col-lg-4 col-sm-2 control-label">有无备用房屋</label>
-                                          <div class="col-lg-8">
-                                              <div class="radio-list"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 无</div>
-                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 一套</div>
-                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 多套</div>
+                                              <div class="radio-list">
+                                                  <label><input type="radio" name="diya" value="option2"> 愿意抵押，以获得更高的贷款</label>
+                                              </div>
+                                              <div class="radio-list">
+                                                  <label><input type="radio" name="diya" value="option2"> 不抵押车辆，仅作为资产证明</label>
+                                              </div>
                                           </div>
                                       </div>
                                   </div>
@@ -514,9 +620,17 @@
 
                                   <div class="form-group">
                                       <label class="col-lg-3 col-sm-2 control-label">信用记录</label>
-                                      <div class="radio-inline"><span class="checked"><input type="radio" name="credit_record" value="toast-top-right" checked=""></span> 无信用记录</div>
-                                      <div class="radio-inline"><span><input type="radio" name="credit_record" value="toast-bottom-right"></span> 信用记录良好</div>
-                                      <div class="radio-inline"><span><input type="radio" name="credit_record" value="toast-bottom-right"></span> 有逾期</div>
+                                      <div class="col-lg-8">
+                                          <div class="radio-inline">
+                                              <label><input type="radio" name="diya" value="option2"> 无信用记录</label>
+                                          </div>
+                                          <div class="radio-inline">
+                                              <label><input type="radio" name="diya" value="option2"> 信用记录良好</label>
+                                          </div>
+                                          <div class="radio-inline">
+                                              <label><input type="radio" name="diya" value="option2"> 有逾期</label>
+                                          </div>
+                                      </div>
                                   </div>
                                     <!-- 信用有逾期-->
                                   <div class="form-group" id="credit_loss" class="show">
@@ -783,7 +897,7 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2013 &copy; FlatLab by VectorLab.
+              2016 &copy; Lianzi360 Powered by 琥珀数据科技.
               <a href="#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
@@ -828,5 +942,19 @@
   <!--script for this page-->
   <script src="js/form-component.js"></script>
 
+  <script type="application/javascript">
+      function indentitySelect(indentity){
+          alert(indentity)
+
+          $("#identity-staff").show();
+//          $("#identity-staff").style.display=""
+          $("#identity-bussiness-ower").show();
+          $("#identity-one").show();
+          $("#identity-free").show();
+
+          $("#"+indentity).show()
+      }
+
+  </script>
   </body>
 </html>
