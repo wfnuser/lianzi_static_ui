@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>信贷需求录入</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <link href="assets/toastr-master/toastr.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-fileupload/bootstrap-fileupload.css" />
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-colorpicker/css/colorpicker.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-daterangepicker/daterangepicker.css" />
+      <!--right slidebar-->
+      <link href="css/slidebars.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+
+  <body>
+
+  <section id="container" class="">
+      <!--header start-->
+      <header class="header white-bg">
+          <div class="sidebar-toggle-box">
+              <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+          </div>
+          <!--logo start-->
+          <a href="index.html" class="logo">链资360<span>信贷撮合平台</span></a>
+          <!--logo end-->
+          <div class="nav notify-row" id="top_menu">
+              <!--  notification start -->
+
+              <!--  notification end -->
+          </div>
+          <div class="top-nav ">
+              <!--search & user info start-->
+              <ul class="nav pull-right top-menu">
+                  <li>
+                      <input type="text" class="form-control search" placeholder="Search">
+                  </li>
+                  <!-- user login dropdown start-->
+                  <li class="dropdown">
+                      <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                          <img alt="" src="img/avatar1_small.jpg">
+                          <span class="username">李天天</span>
+                          <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu extended logout">
+                          <div class="log-arrow-up"></div>
+                          <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                          <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                          <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li>
+                          <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                      </ul>
+                  </li>
+                  <li class="sb-toggle-right">
+                      <i class="fa  fa-align-right"></i>
+                  </li>
+                  <!-- user login dropdown end -->
+              </ul>
+              <!--search & user info end-->
+          </div>
+      </header>
+      <!--header end-->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <li>
+                      <a href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="active">
+                          <i class="fa fa-laptop"></i>
+                          <span>信贷需求管理</span>
+                      </a>
+                      <ul class="sub">
+                          <li class="active"><a href="fin_demand_input.html">信贷需求提交</a></li>
+                          <li><a href="fin_demand_list.html">信贷需求列表</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-book"></i>
+                          <span>信贷撮合（资金方）</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="general.html">信贷需求检索</a></li>
+                          <li><a  href="buttons.html">信贷资产列表</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-book"></i>
+                          <span>信贷资产管理</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="general.html">信贷资产池列表</a></li>
+                          <li><a  href="buttons.html">信贷资产错配</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>借款人管理</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="grids.html">借款人列表</a></li>
+                          <li><a  href="calendar.html">还款日历</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-tasks"></i>
+                          <span>风险控制</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="form_component.html">借款人综合评分</a></li>
+                      </ul>
+                  </li>
+
+
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+              <!-- page start-->
+              <div class="row">
+                  <div class="col-lg-6">
+                      <section class="panel">
+                          <header class="panel-heading">
+                              贷款需求
+                          </header>
+                          <div class="panel-body">
+                              <form class="form-horizontal" role="form">
+
+
+                                  <div class="form-group">
+                                      <label for="expect_loan_amount" class="col-lg-3 col-sm-2 control-label">期望金额</label>
+                                      <div class="col-lg-8">
+                                          <input type="text" class="form-control" id="expect_loan_amount" placeholder="万">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="loan_usage" class="col-lg-3 col-sm-2 control-label">贷款用途</label>
+                                      <div class="col-lg-8">
+                                          <input type="text" class="form-control" id="loan_usage">
+                                      </div>
+                                  </div>
+
+                              </form>
+                          </div>
+                      </section>
+                      <section class="panel">
+                          <header class="panel-heading">
+                              基本信息
+                          </header>
+                          <div class="panel-body">
+                              <form class="form-horizontal" role="form">
+                                  <div class="form-group">
+                                      <label for="loan_indentity" class="col-lg-3 col-sm-2 control-label">借贷人身份</label>
+                                      <div class="col-lg-8">
+                                          <input type="text" class="form-control" id="loan_indentity">
+                                      </div>
+                                  </div>
+
+                                  <!--借贷人身份,上班族,企业主,个体户,自由职业-->
+                                  <div class="indentity-all">
+                                      <!-- 上班族-->
+                                  <div class="hidden" id="identity-staff">
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">工作地点</label>
+                                          <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 上海</div>
+                                          <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 外地</div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">单位类型</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">单位工作年限</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="月">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">银行卡月收入</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="元">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">现金月收入</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="元">
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                      <!-- 企业主-->
+                                  <div class="hidden" id="identity-bussiness-ower">
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">注册地址</label>
+                                          <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 上海</div>
+                                          <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 外地</div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">经营年限</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="月">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">对公帐户月流水</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="万">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">个人银行卡月收入</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="元">
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                      <!-- 个体户-->
+                                  <div class="hidden" id="identity-one">
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">注册地址</label>
+                                          <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 上海</div>
+                                          <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 外地</div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">经营年限</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="月">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">对公帐户月流水</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="万">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">个人银行卡月收入</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="元">
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                      <!--自由职业 -->
+                                  <div class="hidden" id="identity-free">
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">银行卡月收入</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="元">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-3 col-sm-2 control-label">现金月收入</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="form-control" placeholder="元">
+                                          </div>
+                                      </div>
+                                  </div>
+                                  </div>
+
+
+                                  <div class="form-group">
+                                      <label for="age" class="col-lg-3 col-sm-2 control-label">借贷人年龄</label>
+                                      <div class="col-lg-8">
+                                          <input type="text" class="form-control" id="age">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label class="col-lg-3 col-sm-2 control-label">现居住地</label>
+                                      <div class="radio-inline"><span class="checked"><input type="radio" name="positions" value="toast-top-right" checked=""></span> 上海</div>
+                                      <div class="radio-inline"><span><input type="radio" name="positions" value="toast-bottom-right"></span> 外地</div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-lg-3 col-sm-2 control-label">借贷人称呼</label>
+                                      <div class="col-lg-8">
+                                          <input type="text" class="form-control" id="name">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="radio-inline"><span class="checked"><input type="radio" name="gender" value="toast-top-right" checked=""></span> 先生</div>
+                                      <div class="radio-inline"><span><input type="radio" name="gender" value="toast-bottom-right"></span> 女士</div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="phone" class="col-lg-3 col-sm-2 control-label">联系手机</label>
+                                      <div class="col-lg-8">
+                                          <input type="text" class="form-control" id="phone">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="identity" class="col-lg-3 col-sm-2 control-label">身份证</label>
+                                      <div class="col-lg-8">
+                                          <input type="text" class="form-control" id="identity">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="qq" class="col-lg-3 col-sm-2 control-label">QQ</label>
+                                      <div class="col-lg-8">
+                                          <input type="text" class="form-control" id="qq">
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </section>
+                      <section class="panel">
+                          <header class="panel-heading">
+                              贷款资质
+                          </header>
+                          <div class="panel-body">
+                              <form class="form-horizontal" role="form">
+                                  <div class="form-group">
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label">房产类型</label>
+                                      <div class="col-lg-8">
+                                          <input type="text" class="form-control" id="house_type">
+                                      </div>
+                                  </div>
+                                  <!-- 房产类型-->
+                                  <div class="form-group" id="has_house" class="show" >
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">现居住地</label>
+                                          <div class="col-lg-8">
+                                              <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 上海</div>
+                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 外地</div>
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">有无房本</label>
+                                          <div class="col-lg-8">
+                                              <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 有</div>
+                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 无</div>
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">产权人数</label>
+                                          <div class="col-lg-8">
+                                              <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 1人</div>
+                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 2人</div>
+                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 3人</div>
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">包括</label>
+                                          <div class="col-lg-8">
+                                              <div class="radio-list"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 本人</div>
+                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 夫妻中另一方</div>
+                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 18岁以下的孩子</div>
+                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 50岁以上的老人</div>
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">房款结清状态</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="control-label">
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">房龄</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="control-label">
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">建筑面积</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="control-label">
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">房屋市场估值</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="control-label">
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">是否愿意抵押</label>
+                                          <div class="col-lg-8">
+                                              <div class="radio-list"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 愿意抵押，以获得更高的贷款</div>
+                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 不抵押房屋，仅作为资产证明</div>
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">有无备用房屋</label>
+                                          <div class="col-lg-8">
+                                              <div class="radio-list"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 无</div>
+                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 一套</div>
+                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 多套</div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="form-group">
+                                      <label for="car_type" class="col-lg-3 col-sm-2 control-label">车辆类型</label>
+                                      <div class="col-lg-8">
+                                          <input type="text" class="form-control" id="car_type">
+                                      </div>
+                                  </div>
+                                  <!-- 车辆信息-->
+                                  <div class="form-group" id="has_car" class="show" >
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">车辆归属人</label>
+                                          <div class="col-lg-8">
+                                              <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 本人</div>
+                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 直系亲属</div>
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">车辆归属地</label>
+                                          <div class="col-lg-8">
+                                              <div class="radio-inline"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 上海</div>
+                                              <div class="radio-inline"><span><input type="radio" value="toast-bottom-right"></span> 外地</div>
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">按揭状态</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="control-label">
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">车龄</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="control-label">
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">车辆估值</label>
+                                          <div class="col-lg-8">
+                                              <input type="text" class="control-label">
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">是否愿意抵押</label>
+                                          <div class="col-lg-8">
+                                              <div class="radio-list"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 愿意抵押，以获得更高的贷款</div>
+                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 不抵押车辆，仅作为资产证明</div>
+                                          </div>
+                                      </div>
+                                      <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-4 col-sm-2 control-label">有无备用房屋</label>
+                                          <div class="col-lg-8">
+                                              <div class="radio-list"><span class="checked"><input type="radio" value="toast-top-right" checked=""></span> 无</div>
+                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 一套</div>
+                                              <div class="radio-list"><span><input type="radio" value="toast-bottom-right"></span> 多套</div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="form-group">
+                                      <label class="col-lg-3 col-sm-2 control-label">信用记录</label>
+                                      <div class="radio-inline"><span class="checked"><input type="radio" name="credit_record" value="toast-top-right" checked=""></span> 无信用记录</div>
+                                      <div class="radio-inline"><span><input type="radio" name="credit_record" value="toast-bottom-right"></span> 信用记录良好</div>
+                                      <div class="radio-inline"><span><input type="radio" name="credit_record" value="toast-bottom-right"></span> 有逾期</div>
+                                  </div>
+                                    <!-- 信用有逾期-->
+                                  <div class="form-group" id="credit_loss" class="show">
+                                      <label class="col-lg-4 col-sm-2 control-label"></label>
+                                      <div class="col-lg-8">
+                                          <label class="col-lg-5 col-sm-2 control-label">单次逾期最长天数</label>
+                                          <div class="col-lg-7">
+                                              <input type="text" class="control-label" > 天
+                                          </div>
+                                          <label class="col-lg-5 col-sm-2 control-label">24个月内逾期次数</label>
+                                          <div class="col-lg-7">
+                                              <input type="text" class="control-label"> 次
+                                          </div>
+                                          <label class="col-lg-5 col-sm-2 control-label">累积的逾期次数</label>
+                                          <div class="col-lg-7">
+                                              <input type="text" class="control-label"> 次
+                                          </div>
+
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </section>
+                  </div>
+                  <div class="col-lg-6">
+                      <section class="panel">
+                          <header class="panel-heading">
+                              材料证件
+                          </header>
+                          <div class="panel-body">
+                              <form class="form-horizontal" role="form">
+                                  <div class="form-group last">
+                                      <label class="control-label col-md-3">身份证正面</label>
+                                      <div class="col-md-9">
+                                          <div class="fileupload fileupload-new" data-provides="fileupload">
+                                              <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                                                  <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
+                                              </div>
+                                              <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                              <div>
+                                                   <span class="btn btn-white btn-file">
+                                                   <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select image</span>
+                                                   <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+                                                   <input type="file" class="default">
+                                                   </span>
+                                                  <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash"></i> Remove</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-group last">
+                                      <label class="control-label col-md-3">身份证反面</label>
+                                      <div class="col-md-9">
+                                          <div class="fileupload fileupload-new" data-provides="fileupload">
+                                              <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                                                  <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
+                                              </div>
+                                              <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                              <div>
+                                                   <span class="btn btn-white btn-file">
+                                                   <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select image</span>
+                                                   <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+                                                   <input type="file" class="default">
+                                                   </span>
+                                                  <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash"></i> Remove</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-group last">
+                                      <label class="control-label col-md-3">房产证</label>
+                                      <div class="col-md-9">
+                                          <div class="fileupload fileupload-new" data-provides="fileupload">
+                                              <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                                                  <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
+                                              </div>
+                                              <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                              <div>
+                                                   <span class="btn btn-white btn-file">
+                                                   <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select image</span>
+                                                   <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+                                                   <input type="file" class="default">
+                                                   </span>
+                                                  <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash"></i> Remove</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-group last">
+                                      <label class="control-label col-md-3">房产证</label>
+                                      <div class="col-md-9">
+                                          <div class="fileupload fileupload-new" data-provides="fileupload">
+                                              <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                                                  <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
+                                              </div>
+                                              <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                              <div>
+                                                   <span class="btn btn-white btn-file">
+                                                   <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select image</span>
+                                                   <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+                                                   <input type="file" class="default">
+                                                   </span>
+                                                  <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash"></i> Remove</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </section>
+
+                  </div>
+
+              </div>
+              <button type="submit" class="btn btn-info">Submit</button>
+              <!-- page end-->
+          </section>
+      </section>
+      <!--main content end-->
+      <!-- Right Slidebar start -->
+      <div class="sb-slidebar sb-right sb-style-overlay">
+          <h5 class="side-title">Online Customers</h5>
+          <ul class="quick-chat-list">
+              <li class="online">
+                  <div class="media">
+                      <a href="#" class="pull-left media-thumb">
+                          <img alt="" src="img/chat-avatar2.jpg" class="media-object">
+                      </a>
+                      <div class="media-body">
+                          <strong>John Doe</strong>
+                          <small>Dream Land, AU</small>
+                      </div>
+                  </div><!-- media -->
+              </li>
+              <li class="online">
+                  <div class="media">
+                      <a href="#" class="pull-left media-thumb">
+                          <img alt="" src="img/chat-avatar.jpg" class="media-object">
+                      </a>
+                      <div class="media-body">
+                          <div class="media-status">
+                              <span class=" badge bg-important">3</span>
+                          </div>
+                          <strong>Jonathan Smith</strong>
+                          <small>United States</small>
+                      </div>
+                  </div><!-- media -->
+              </li>
+
+              <li class="online">
+                  <div class="media">
+                      <a href="#" class="pull-left media-thumb">
+                          <img alt="" src="img/pro-ac-1.png" class="media-object">
+                      </a>
+                      <div class="media-body">
+                          <div class="media-status">
+                              <span class=" badge bg-success">5</span>
+                          </div>
+                          <strong>Jane Doe</strong>
+                          <small>ABC, USA</small>
+                      </div>
+                  </div><!-- media -->
+              </li>
+              <li class="online">
+                  <div class="media">
+                      <a href="#" class="pull-left media-thumb">
+                          <img alt="" src="img/avatar1.jpg" class="media-object">
+                      </a>
+                      <div class="media-body">
+                          <strong>Anjelina Joli</strong>
+                          <small>Fockland, UK</small>
+                      </div>
+                  </div><!-- media -->
+              </li>
+              <li class="online">
+                  <div class="media">
+                      <a href="#" class="pull-left media-thumb">
+                          <img alt="" src="img/mail-avatar.jpg" class="media-object">
+                      </a>
+                      <div class="media-body">
+                          <div class="media-status">
+                              <span class=" badge bg-warning">7</span>
+                          </div>
+                          <strong>Mr Tasi</strong>
+                          <small>Dream Land, USA</small>
+                      </div>
+                  </div><!-- media -->
+              </li>
+          </ul>
+          <h5 class="side-title"> pending Task</h5>
+          <ul class="p-task tasks-bar">
+              <li>
+                  <a href="#">
+                      <div class="task-info">
+                          <div class="desc">Dashboard v1.3</div>
+                          <div class="percent">40%</div>
+                      </div>
+                      <div class="progress progress-striped">
+                          <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
+                              <span class="sr-only">40% Complete (success)</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <div class="task-info">
+                          <div class="desc">Database Update</div>
+                          <div class="percent">60%</div>
+                      </div>
+                      <div class="progress progress-striped">
+                          <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar progress-bar-warning">
+                              <span class="sr-only">60% Complete (warning)</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <div class="task-info">
+                          <div class="desc">Iphone Development</div>
+                          <div class="percent">87%</div>
+                      </div>
+                      <div class="progress progress-striped">
+                          <div style="width: 87%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
+                              <span class="sr-only">87% Complete</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <div class="task-info">
+                          <div class="desc">Mobile App</div>
+                          <div class="percent">33%</div>
+                      </div>
+                      <div class="progress progress-striped">
+                          <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar progress-bar-danger">
+                              <span class="sr-only">33% Complete (danger)</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <div class="task-info">
+                          <div class="desc">Dashboard v1.3</div>
+                          <div class="percent">45%</div>
+                      </div>
+                      <div class="progress progress-striped active">
+                          <div style="width: 45%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="45" role="progressbar" class="progress-bar">
+                              <span class="sr-only">45% Complete</span>
+                          </div>
+                      </div>
+
+                  </a>
+              </li>
+              <li class="external">
+                  <a href="#">See All Tasks</a>
+              </li>
+          </ul>
+      </div>
+      <!-- Right Slidebar end -->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2013 &copy; FlatLab by VectorLab.
+              <a href="#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+
+  <!--custom switch-->
+  <script src="js/bootstrap-switch.js"></script>
+  <!--custom tagsinput-->
+  <script src="js/jquery.tagsinput.js"></script>
+  <!--custom checkbox & radio-->
+  <script type="text/javascript" src="js/ga.js"></script>
+
+  <script type="text/javascript" src="assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-daterangepicker/date.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+  <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
+
+  <script type="text/javascript" src="assets/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+  <script src="js/respond.min.js" ></script>
+
+  <!--right slidebar-->
+  <script src="js/slidebars.min.js"></script>
+
+
+  <!--common script for all pages-->
+  <script src="js/common-scripts.js"></script>
+
+  <!--script for this page-->
+  <script src="js/form-component.js"></script>
+
+  </body>
+</html>
