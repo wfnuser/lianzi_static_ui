@@ -208,12 +208,12 @@
                                   <div class="form-group">
                                       <label for="loan_indentity" class="col-lg-3 col-sm-2 control-label">借贷人身份</label>
                                       <div class="col-lg-8">
-                                          <select class="form-control" name="loan_indentity" id="loan_indentity" onchange="indentitySelect('identity-staff')">
-                                              <option selected value="请选择">请选择</option>
-                                              <option value="上班族">上班族</option>
-                                              <option value="企业主">企业主</option>
-                                              <option value="个体户">个体户</option>
-                                              <option value="自由职业">自由职业</option>
+                                          <select class="form-control" name="loan_indentity" id="loan_indentity" onchange="indentitySelect()">
+                                              <option i="identity-null" value="请选择">请选择</option>
+                                              <option i="identity-staff" value="上班族">上班族</option>
+                                              <option i="identity-bussiness" value="企业主">企业主</option>
+                                              <option i="identity-one" value="个体户">个体户</option>
+                                              <option i="identity-free" value="自由职业">自由职业</option>
                                           </select>
                                       </div>
                                   </div>
@@ -258,7 +258,7 @@
                                   </div>
 
                                       <!-- 企业主-->
-                                  <div class="hidden" id="identity-bussiness-ower">
+                                  <div class="hidden" id="identity-bussiness">
                                       <div class="form-group">
                                           <label class="col-lg-3 col-sm-2 control-label">注册地址</label>
                                           <div class="radio-inline">
@@ -397,7 +397,7 @@
                                   <div class="form-group">
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label">房产类型</label>
                                       <div class="col-lg-8">
-                                          <select class="form-control" id="house_type">
+                                          <select class="form-control" id="house_type" onchange="houseSelect()">
                                               <option value="没有房产">没有房产</option>
                                               <option value="普通住宅">普通住宅</option>
                                               <option value="商住两用房">商住两用房</option>
@@ -409,16 +409,16 @@
                                       </div>
                                   </div>
                                   <!-- 房产类型-->
-                                  <div class="form-group" id="has_house" class="show" >
+                                  <div class="form-group hidden" id="has_house" >
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">现居住地</label>
                                           <div class="col-lg-8">
                                               <div class="radio-inline" style="padding-left: 0px;width: 70px">
-                                                  <label><input type="radio" name="loc1" value="option2" checked> 上海</label>
+                                                  <label><input type="radio" name="loc11" value="option2" checked> 上海</label>
                                               </div>
                                               <div class="radio-inline" style="padding-left: 0px;width: 70px">
-                                                  <label><input type="radio" name="loc1" value="option2"> 外地</label>
+                                                  <label><input type="radio" name="loc11" value="option2"> 外地</label>
                                               </div>
                                           </div>
                                       </div>
@@ -518,10 +518,10 @@
                                           <label class="col-lg-4 col-sm-2 control-label">是否愿意抵押</label>
                                           <div class="col-lg-8">
                                               <div class="radio-list">
-                                                  <label><input type="radio" name="diya" value="option2"> 愿意抵押，以获得更高的贷款</label>
+                                                  <label><input type="radio" name="diya1" value="option2"> 愿意抵押，以获得更高的贷款</label>
                                               </div>
                                               <div class="radio-list">
-                                                  <label><input type="radio" name="diya" value="option2"> 不抵押房屋，仅作为资产证明</label>
+                                                  <label><input type="radio" name="diya1" value="option2"> 不抵押房屋，仅作为资产证明</label>
                                               </div>
                                           </div>
                                       </div>
@@ -546,8 +546,7 @@
                                   <div class="form-group">
                                       <label for="car_type" class="col-lg-3 col-sm-2 control-label">车辆类型</label>
                                       <div class="col-lg-8">
-                                          <select class="form-control" id="car_type">
-                                              <option value="请选择">请选择</option>
+                                          <select class="form-control" id="car_type" onchange="carSelect()">
                                               <option value="没有车辆">没有车辆</option>
                                               <option value="家用轿车">家用轿车</option>
                                               <option value="营运轿车">营运轿车</option>
@@ -557,7 +556,7 @@
                                       </div>
                                   </div>
                                   <!-- 车辆信息-->
-                                  <div class="form-group" id="has_car" class="show" >
+                                  <div class="hidden" id="has_car" >
                                       <label for="house_type" class="col-lg-3 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-4 col-sm-2 control-label">车辆归属人</label>
@@ -622,18 +621,18 @@
                                       <label class="col-lg-3 col-sm-2 control-label">信用记录</label>
                                       <div class="col-lg-8">
                                           <div class="radio-inline">
-                                              <label><input type="radio" name="diya" value="option2"> 无信用记录</label>
+                                              <label onclick="creditSelect(0)"><input type="radio" name="xinyong" value="option2"> 无信用记录</label>
                                           </div>
                                           <div class="radio-inline">
-                                              <label><input type="radio" name="diya" value="option2"> 信用记录良好</label>
+                                              <label onclick="creditSelect(1)"><input type="radio" name="xinyong" value="option2"> 信用记录良好</label>
                                           </div>
                                           <div class="radio-inline">
-                                              <label><input type="radio" name="diya" value="option2"> 有逾期</label>
+                                              <label onclick="creditSelect(2)"><input type="radio" name="xinyong" value="option2"> 有逾期</label>
                                           </div>
                                       </div>
                                   </div>
                                     <!-- 信用有逾期-->
-                                  <div class="form-group" id="credit_loss" class="show">
+                                  <div class="hidden" id="credit_loss">
                                       <label class="col-lg-4 col-sm-2 control-label"></label>
                                       <div class="col-lg-8">
                                           <label class="col-lg-5 col-sm-2 control-label">单次逾期最长天数</label>
@@ -943,16 +942,44 @@
   <script src="js/form-component.js"></script>
 
   <script type="application/javascript">
-      function indentitySelect(indentity){
-          alert(indentity)
+      function indentitySelect(){
+          $("#identity-staff").attr("class","hidden");
+          $("#identity-bussiness").attr("class","hidden");
+          $("#identity-one").attr("class","hidden");
+          $("#identity-free").attr("class","hidden");
 
-          $("#identity-staff").show();
-//          $("#identity-staff").style.display=""
-          $("#identity-bussiness-ower").show();
-          $("#identity-one").show();
-          $("#identity-free").show();
+          var obj = document.getElementById("loan_indentity");
+          var i = obj.options[obj.selectedIndex].getAttributeNode("i").value;
+          $("#"+i).attr("class","show");
+      }
 
-          $("#"+indentity).show()
+      function houseSelect(){
+          $("#has_house").attr("class","hidden");
+
+          var obj = document.getElementById("house_type");
+          var index = obj.selectedIndex;
+          if (index != 0){
+              $("#has_house").attr("class","form-group");
+          }
+      }
+
+      function carSelect(){
+          $("#has_car").attr("class","hidden");
+
+          var obj = document.getElementById("car_type");
+          var index = obj.selectedIndex;
+          if (index != 0){
+              $("#has_car").attr("class","form-group");
+          }
+      }
+
+      function creditSelect(i){
+
+          $("#credit_loss").attr("class","hidden");
+
+          if(i==2){
+              $("#credit_loss").attr("class","form-group");
+          }
       }
 
   </script>
