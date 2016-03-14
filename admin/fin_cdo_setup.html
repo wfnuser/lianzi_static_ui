@@ -257,7 +257,7 @@
                         </header>
                         <div class="panel-body">
 
-                            <form class="form-horizontal" role="form">
+                            <div class="form-horizontal" role="form">
                                 <div class="form-group">
 
                                     <label class="col-lg-2 col-sm-2 control-label">占比：</label>
@@ -270,129 +270,128 @@
 
                                 <div class="form-group">
                                     <div class="col-md-2">
-                                        <button  type="submit" id="editable-sample_new" class="btn green">
+                                        <!--<button  type="submit" id="editable-sample_new" class="btn green">-->
+                                            <!--新加笔 <i class="fa fa-plus"></i>-->
+                                        <!--</button>-->
+                                        <button id="editable-sample_new_mine" onclick="editTable_new()" class="btn green">
                                             新加笔 <i class="fa fa-plus"></i>
                                         </button>
+                                        </div>
+
+                                        <div class="col-md-2 ">
+                                            <button type="submit" class="btn green">
+                                                计算收益率
+                                            </button>
+                                        </div>
                                     </div>
 
-                                    <div class="col-md-2 ">
-                                        <button type="submit" id="editable-sample_new" class="btn green">
-                                            计算收益率
-                                        </button>
-                                    </div>
+                            <div>
+
+
+                                <div class="adv-table editable-table ">
+
+                                    <div class="space15"></div>
+                                    <table class="table table-striped table-hover table-bordered" id="editable-sample_new">
+                                        <thead>
+                                        <tr>
+                                            <th>编号</th>
+                                            <th>年化收益</th>
+                                            <th>预计月流水</th>
+                                            <th>期限</th>
+                                            <th>还款方式</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="">
+                                            <td>1</td>
+                                            <td>5%</td>
+                                            <th>5000</th>
+                                            <td>
+                                                <select class="form-control input-md m-bot8">
+                                                    <option>1个月</option>
+                                                    <option>2个月</option>
+                                                    <option>3个月</option>
+                                                    <option>4个月</option>
+                                                    <option>5个月</option>
+                                                    <option>6个月</option>
+                                                    <option>7个月</option>
+                                                    <option>8个月</option>
+                                                    <option>9个月</option>
+                                                    <option>10个月</option>
+                                                </select>
+                                            </td>
+                                            <td>
+
+                                                <select class="form-control input-md m-bot8">
+                                                    <option>每月还息，到期还本</option>
+                                                    <option>到期还本息</option>
+
+                                                </select>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="">
+                                            <td>2</td>
+                                            <td>5%</td>
+                                            <th>10000</th>
+                                            <td>
+                                                <select class="form-control input-md m-bot8">
+                                                    <option>1个月</option>
+                                                    <option>2个月</option>
+                                                    <option>3个月</option>
+                                                    <option>4个月</option>
+                                                    <option>5个月</option>
+                                                    <option>6个月</option>
+                                                    <option>7个月</option>
+                                                    <option>8个月</option>
+                                                    <option>9个月</option>
+                                                    <option>10个月</option>
+                                                </select>
+                                            </td>
+                                            <td>
+
+                                                <select class="form-control input-md m-bot8">
+                                                    <option>每月还息，到期还本</option>
+                                                    <option>到期还本息</option>
+
+                                                </select>
+                                            </td>
+
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
                                 </div>
-
-
-
-                               </form>
-
-
-
-
-                            <div class="adv-table editable-table ">
-
-                                <div class="space15"></div>
-                                <table class="table table-striped table-hover table-bordered" id="editable-sample">
-                                    <thead>
-                                    <tr>
-                                        <th>编号</th>
-                                        <th>年化收益</th>
-                                        <th>预计月流水</th>
-                                        <th>期限</th>
-                                        <th>还款方式</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr class="">
-                                        <td>1</td>
-                                        <td>5%</td>
-                                        <th>5000</th>
-                                        <td>
-                                            <select class="form-control input-md m-bot8">
-                                                <option>1个月</option>
-                                                <option>2个月</option>
-                                                <option>3个月</option>
-                                                <option>4个月</option>
-                                                <option>5个月</option>
-                                                <option>6个月</option>
-                                                <option>7个月</option>
-                                                <option>8个月</option>
-                                                <option>9个月</option>
-                                                <option>10个月</option>
-                                            </select>
-                                        </td>
-                                        <td>
-
-                                            <select class="form-control input-md m-bot8">
-                                                <option>每月还息，到期还本</option>
-                                                <option>到期还本息</option>
-
-                                            </select>
-                                        </td>
-
-                                    </tr>
-                                    <tr class="">
-                                        <td>2</td>
-                                        <td>5%</td>
-                                        <th>10000</th>
-                                        <td>
-                                            <select class="form-control input-md m-bot8">
-                                                <option>1个月</option>
-                                                <option>2个月</option>
-                                                <option>3个月</option>
-                                                <option>4个月</option>
-                                                <option>5个月</option>
-                                                <option>6个月</option>
-                                                <option>7个月</option>
-                                                <option>8个月</option>
-                                                <option>9个月</option>
-                                                <option>10个月</option>
-                                            </select>
-                                        </td>
-                                        <td>
-
-                                            <select class="form-control input-md m-bot8">
-                                                <option>每月还息，到期还本</option>
-                                                <option>到期还本息</option>
-
-                                            </select>
-                                        </td>
-
-                                    </tr>
-
-                                    </tbody>
-                                </table>
                             </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-lg-5">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            劣后级
-                        </header>
-                        <div class="panel-body">
-                            <form class="form-horizontal" role="form">
-                                <div class="form-group">
-                                    <label class="col-lg-3 col-sm-2 control-label">占比</label>
-                                    <div class="col-lg-4 control-label">30%</div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 col-sm-2 control-label">预期收益率</label>
-                                    <div class="col-lg-4 control-label">10%</div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 col-sm-2 control-label">投入资金</label>
-                                    <div class="col-lg-4 control-label">100000</div>
-                                </div>
-                            </form>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
+                    <div class="col-lg-5">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                劣后级
+                            </header>
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 col-sm-2 control-label">占比</label>
+                                        <div class="col-lg-4 control-label">30%</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 col-sm-2 control-label">预期收益率</label>
+                                        <div class="col-lg-4 control-label">10%</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 col-sm-2 control-label">投入资金</label>
+                                        <div class="col-lg-4 control-label">100000</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
 
+                    </div>
                 </div>
-            </div>
 
-            <!-- page end-->
+                <!-- page end-->
         </section>
     </section>
     <!--main content end-->
@@ -460,6 +459,51 @@
 
     });
 
+    function editTable_new() {
+        var size = $("#editable-sample_new tbody tr").length;
+
+        $("#editable-sample_new").append(
+                "<tr>" +
+                "<td class=\"sorting_1\">"+(size+1)+"</td>" +
+                "<td class=\"sorting_1\"><input type=\"text\" class=\"form-control small\" ></td>" +
+                "<td class=\"sorting_1\"><input type=\"text\" class=\"form-control small\" ></td>" +
+                "<td class=\"sorting_1\">" +
+                "<select class=\"form-control input-md m-bot8\">" +
+                    "<option>1个月</option>" +
+                    "<option>2个月</option>" +
+                    "<option>3个月</option>" +
+                    "<option>4个月</option>" +
+                    "<option>5个月</option>" +
+                    "<option>6个月</option>" +
+                    "<option>7个月</option>" +
+                    "<option>8个月</option>" +
+                    "<option>9个月</option>" +
+                    "<option>10个月</option>"+
+                    "</select>" +
+                 "</td>" +
+                "<td class=\"sorting_1\">" +
+                    "<select class=\"form-control input-md m-bot8\">" +
+                    "<option>每月还息，到期还本</option>" +
+                    "<option>到期还本息</option>" +
+                "</select>" +
+                "</td>" +
+
+                "</tr>"
+//        </select>
+//        </td>
+//        <td class=" ">
+//
+//                <select class="form-control input-md m-bot8">
+//                <option>每月还息，到期还本</option>
+//        <option>到期还本息</option>
+//
+//        </select>
+//        </td>
+//
+//        </tr>"
+
+        )
+    };
 
 
 </script>
