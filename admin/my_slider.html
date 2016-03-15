@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Slider</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet"/>
+    <!--dynamic table-->
+    <link href="assets/advanced-datatable/media/css/demo_page.css" rel="stylesheet" />
+    <link href="assets/advanced-datatable/media/css/demo_table.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/data-tables/DT_bootstrap.css" />
+      <!--right slidebar-->
+      <link href="css/slidebars.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="bower_components/vue/dist/vue.min.js"></script>
+  </head>
+
+  <body>
+
+  <section id="container" class="">
+      <!--header start-->
+      <header class="header white-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="index.html" class="logo">链资360<span>信贷撮合平台</span></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+
+                <!--  notification end -->
+            </div>
+            <div class="top-nav ">
+                <!--search & user info start-->
+                <ul class="nav pull-right top-menu">
+                    <li>
+                        <input type="text" class="form-control search" placeholder="Search">
+                    </li>
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" src="img/avatar1_small.jpg">
+                            <span class="username">李天天</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li>
+                            <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                    <li class="sb-toggle-right">
+                        <i class="fa  fa-align-right"></i>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!--search & user info end-->
+            </div>
+        </header>
+      <!--header end-->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <li>
+                      <a class="active" href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>信贷需求管理</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="fin_demand_input.html">信贷需求提交</a></li>
+                          <li><a  href="fin_demand_list.html">信贷需求列表</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-book"></i>
+                          <span>信贷撮合（资金方）</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="general.html">信贷需求检索</a></li>
+                          <li><a  href="buttons.html">信贷资产列表</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-book"></i>
+                          <span>信贷资产管理</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="my_slider.html">信贷资产池列表</a></li>
+                          <li><a  href="buttons.html">信贷资产错配</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>借款人管理</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="grids.html">借款人列表</a></li>
+                          <li><a  href="calendar.html">还款日历</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-tasks"></i>
+                          <span>风险控制</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="form_component.html">借款人综合评分</a></li>
+                      </ul>
+                  </li>
+
+
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper" id="loantable">
+              <!-- page start-->
+              <div class="row">
+                  <div class="col-lg-12">
+                      <section class="panel">
+                          <header class="panel-heading">
+                              信贷资产列表
+                          </header>
+                          <div class="panel-body">
+                            <div class="radio" >
+                              <input type="radio" id="one" value="1" v-model="picked" checked="checked">
+                              <label for="one" style="margin-right:15px;padding-left:5px;">个人贷款</label>
+                              <input type="radio" id="two" value="0" v-model="picked">
+                              <label for="two" style="margin-right:15px;padding-left:5px;">企业贷款</label>
+                              <br>
+                             </div>
+                             <!-- personal loan -->
+                              <table class="table sliders" id="myslide" style="display:{{picked=='0' ? 'none' : ''}}">
+                                  <tbody>
+                                    <tr>
+                                        <td>货贷额度</td>
+                                        <td colspan="6">
+                                            <div id="slider-range" class="slider"></div>
+                                            <div class="slider-info">
+                                                额度区间:
+                                                <span id="slider-range-amount"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>货贷期限</td>
+                                        <td colspan="6">
+                                            <div id="slider-time" class="slider"></div>
+                                            <div class="slider-info">
+                                                期限区间:
+                                                <span id="slider-time-amount"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>年龄</td>
+                                        <td colspan="6">
+                                            <div id="slider-age" class="slider"></div>
+                                            <div class="slider-info">
+                                                年龄区间:
+                                                <span id="slider-age-amount"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td width="20%">
+                                      城市:{{city}}
+                                        <select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table" v-model="city" >
+                                          <option value="0" selected="selected">10</option>
+                                          <option value="1">25</option>
+                                          <option value="2">50</option>
+                                          <option value="3">100</option>
+                                        </select>
+                                      </td>
+                                      <td width="5%"></td>
+                                      <td width="20%">
+                                      货贷方式: 
+                                        <select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table">
+                                          <option value="10" selected="selected">10</option>
+                                          <option value="25">25</option>
+                                          <option value="50">50</option>
+                                          <option value="100">100</option>
+                                        </select>
+                                      </td>
+                                      <td width="5%"></td>
+                                      <td width="20%">
+                                      社保缴纳要求: 
+                                        <select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table">
+                                          <option value="10" selected="selected">10</option>
+                                          <option value="25">25</option>
+                                          <option value="50">50</option>
+                                          <option value="100">100</option>
+                                        </select>
+                                      </td>
+                                      <td width="5%"></td>
+                                      <td width="20%">
+                                      公积金要求: 
+                                        <select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table">
+                                          <option value="10" selected="selected">10</option>
+                                          <option value="25">25</option>
+                                          <option value="50">50</option>
+                                          <option value="100">100</option>
+                                        </select>
+                                      </td>
+                                      <td width="5%"></td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+                              <!-- company loan -->
+                              <table class="table sliders" id="myslide" style="display:{{picked=='1' ? 'none' : ''}}">
+                                  <tbody>
+                                    <tr>
+                                        <td>企业额度</td>
+                                        <td colspan="4">
+                                            <div id="slider-range-2" class="slider"></div>
+                                            <div class="slider-info">
+                                                额度区间:
+                                                <span id="slider-range-2-amount"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>货贷期限</td>
+                                        <td colspan="4">
+                                            <div id="slider-time-2" class="slider"></div>
+                                            <div class="slider-info">
+                                                期限区间:
+                                                <span id="slider-time-2-amount"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>日对私流水</td>
+                                        <td colspan="4">
+                                            <div id="slider-private" class="slider"></div>
+                                            <div class="slider-info">
+                                                流水区间:
+                                                <span id="slider-private-amount"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>日对公流水</td>
+                                        <td colspan="4">
+                                            <div id="slider-public" class="slider"></div>
+                                            <div class="slider-info">
+                                                流水区间:
+                                                <span id="slider-public-amount"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td width="30%">
+                                      城市: 
+                                        <select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table">
+                                          <option value="10" selected="selected">10</option>
+                                          <option value="25">25</option>
+                                          <option value="50">50</option>
+                                          <option value="100">100</option>
+                                        </select>
+                                      </td>
+                                      <td width="3%"></td>
+                                      <td width="30%">
+                                      企业类型: 
+                                        <select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table">
+                                          <option value="10" selected="selected">10</option>
+                                          <option value="25">25</option>
+                                          <option value="50">50</option>
+                                          <option value="100">100</option>
+                                        </select>
+                                      </td>
+                                      <td width="3%"></td>
+                                      <td width="30%">
+                                      货贷方式: 
+                                        <select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table">
+                                          <option value="10" selected="selected">10</option>
+                                          <option value="25">25</option>
+                                          <option value="50">50</option>
+                                          <option value="100">100</option>
+                                        </select>
+                                      </td>
+                                      <td width="5%"></td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+
+                              <div class="adv-table">
+                                <div class="row-fluid" v-if="myslide.picked">
+                                  <div class="span6">
+                                    <div id="dynamic-table_length" class="dataTables_length">
+                                      <label>
+                                        records per page
+                                        <select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table">
+                                          <option value="10" selected="selected">10</option>
+                                          <option value="25">25</option>
+                                          <option value="50">50</option>
+                                          <option value="100">100</option>
+                                        </select> 
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <table  class="display table table-bordered table-striped" id="dynamic-table">
+                                <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>申请人</th>
+                                    <th>来源机构</th>
+                                    <th>货贷额</th>
+                                    <th>期限</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                      
+                                  <tr class="gradeX" v-for="people in peoples | filterBy city in 'citytype'">
+                                      <td>{{$index}}</td>
+                                      <td>{{people.name}}</td>
+                                      <td>{{people.company}}</td>
+                                      <td>{{people.money}}</td>
+                                      <td>{{people.time}}</td>
+                                      <td>查看</td>
+                                  </tr>
+                                
+                                </tfoot>
+                                </table>
+                              </div>
+                          </div>
+                      </section>
+                  </div>
+              </div>
+              <!-- page end-->
+          </section>
+      </section>
+      <!--main content end-->
+      <!-- Right Slidebar start -->
+      <div class="sb-slidebar sb-right sb-style-overlay">
+          <h5 class="side-title">Online Customers</h5>
+          <ul class="quick-chat-list">
+              <li class="online">
+                  <div class="media">
+                      <a href="#" class="pull-left media-thumb">
+                          <img alt="" src="img/chat-avatar2.jpg" class="media-object">
+                      </a>
+                      <div class="media-body">
+                          <strong>John Doe</strong>
+                          <small>Dream Land, AU</small>
+                      </div>
+                  </div><!-- media -->
+              </li>
+              <li class="online">
+                  <div class="media">
+                      <a href="#" class="pull-left media-thumb">
+                          <img alt="" src="img/chat-avatar.jpg" class="media-object">
+                      </a>
+                      <div class="media-body">
+                          <div class="media-status">
+                              <span class=" badge bg-important">3</span>
+                          </div>
+                          <strong>Jonathan Smith</strong>
+                          <small>United States</small>
+                      </div>
+                  </div><!-- media -->
+              </li>
+
+              <li class="online">
+                  <div class="media">
+                      <a href="#" class="pull-left media-thumb">
+                          <img alt="" src="img/pro-ac-1.png" class="media-object">
+                      </a>
+                      <div class="media-body">
+                          <div class="media-status">
+                              <span class=" badge bg-success">5</span>
+                          </div>
+                          <strong>Jane Doe</strong>
+                          <small>ABC, USA</small>
+                      </div>
+                  </div><!-- media -->
+              </li>
+              <li class="online">
+                  <div class="media">
+                      <a href="#" class="pull-left media-thumb">
+                          <img alt="" src="img/avatar1.jpg" class="media-object">
+                      </a>
+                      <div class="media-body">
+                          <strong>Anjelina Joli</strong>
+                          <small>Fockland, UK</small>
+                      </div>
+                  </div><!-- media -->
+              </li>
+              <li class="online">
+                  <div class="media">
+                      <a href="#" class="pull-left media-thumb">
+                          <img alt="" src="img/mail-avatar.jpg" class="media-object">
+                      </a>
+                      <div class="media-body">
+                          <div class="media-status">
+                              <span class=" badge bg-warning">7</span>
+                          </div>
+                          <strong>Mr Tasi</strong>
+                          <small>Dream Land, USA</small>
+                      </div>
+                  </div><!-- media -->
+              </li>
+          </ul>
+          <h5 class="side-title"> pending Task</h5>
+          <ul class="p-task tasks-bar">
+              <li>
+                  <a href="#">
+                      <div class="task-info">
+                          <div class="desc">Dashboard v1.3</div>
+                          <div class="percent">40%</div>
+                      </div>
+                      <div class="progress progress-striped">
+                          <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
+                              <span class="sr-only">40% Complete (success)</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <div class="task-info">
+                          <div class="desc">Database Update</div>
+                          <div class="percent">60%</div>
+                      </div>
+                      <div class="progress progress-striped">
+                          <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar progress-bar-warning">
+                              <span class="sr-only">60% Complete (warning)</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <div class="task-info">
+                          <div class="desc">Iphone Development</div>
+                          <div class="percent">87%</div>
+                      </div>
+                      <div class="progress progress-striped">
+                          <div style="width: 87%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
+                              <span class="sr-only">87% Complete</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <div class="task-info">
+                          <div class="desc">Mobile App</div>
+                          <div class="percent">33%</div>
+                      </div>
+                      <div class="progress progress-striped">
+                          <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar progress-bar-danger">
+                              <span class="sr-only">33% Complete (danger)</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <div class="task-info">
+                          <div class="desc">Dashboard v1.3</div>
+                          <div class="percent">45%</div>
+                      </div>
+                      <div class="progress progress-striped active">
+                          <div style="width: 45%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="45" role="progressbar" class="progress-bar">
+                              <span class="sr-only">45% Complete</span>
+                          </div>
+                      </div>
+
+                  </a>
+              </li>
+              <li class="external">
+                  <a href="#">See All Tasks</a>
+              </li>
+          </ul>
+      </div>
+      <!-- Right Slidebar end -->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2013 &copy; FlatLab by VectorLab.
+              <a href="#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+    <script>
+      new Vue({
+          el: '#loantable',
+          data: {
+              peoples: [
+                { name: 'mayun', company: 'aliyun', money: '10', time: '5', citytype: '0' },
+                { name: 'liyanhong', company: 'baidu', money: '10', time: '5', citytype: '1' },
+                { name: 'mahuateng', company: 'tecent', money: '10', time: '5', citytype: '0' },
+                { name: 'scott', company: 'heyue', money: '10', time: '5', citytype: '1' },
+                { name: 'mayun', company: 'aliyun', money: '10', time: '5', citytype: '0' },
+                { name: 'liyanhong', company: 'baidu', money: '10', time: '5', citytype: '1' },
+                { name: 'mahuateng', company: 'tecent', money: '10', time: '5', citytype: '3' },
+                { name: 'scott', company: 'heyue', money: '10', time: '5', citytype: '2' },
+                { name: 'mayun', company: 'aliyun', money: '10', time: '5', citytype: '3' },
+                { name: 'liyanhong', company: 'baidu', money: '10', time: '5', citytype: '0' },
+                { name: 'mahuateng', company: 'tecent', money: '10', time: '5', citytype: '1' },
+                { name: 'scott', company: 'heyue', money: '10', time: '5', citytype: '0' },
+                { name: 'mayun', company: 'aliyun', money: '10', time: '5', citytype: '0' },
+                { name: 'liyanhong', company: 'baidu', money: '10', time: '5', citytype: '0' },
+                { name: 'mahuateng', company: 'tecent', money: '10', time: '5', citytype: '0' },
+                { name: 'scott', company: 'heyue', money: '10', time: '5', citytype: '0' },
+              ]
+          }
+      });
+      
+    </script>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="assets/jquery-ui/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+    <script type="text/javascript" language="javascript" src="assets/advanced-datatable/media/js/jquery.dataTables.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/respond.min.js" ></script>
+
+    <!--right slidebar-->
+    <script src="js/slidebars.min.js"></script>
+
+    <!--dynamic table initialization -->
+    <script src="js/dynamic_table_init.js"></script>
+
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+
+    <!--script for this page only-->
+    <script src="js/sliders.js" type="text/javascript"></script>
+
+
+  </body>
+</html>
